@@ -26,8 +26,12 @@
         </a>
 
         <div class="col text-center">
-            <a class="nav-link" href="{{ route('users.index') }}">
+            <a class="nav-link d-inline-block" href="{{ route('users.index') }}">
                 USERS
+            </a>
+
+            <a class="nav-link d-inline-block" href="{{ route('courses.index') }}">
+                COURSES
             </a>
         </div>
 

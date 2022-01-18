@@ -47,6 +47,8 @@ Route::middleware('auth')->group(function () {
             Route::get('/home', 'HomeAdminController@index')->name('adminHome');
 
             Route::resource('users', 'UserController');
+
+            Route::resource('courses', 'CourseController');
         });
 
     });
