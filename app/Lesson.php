@@ -4,16 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class Lesson extends Model
 {
     protected $fillable = [
+        'course_id',
         'title',
+        'order',
         'description',
         'video_src',
     ];
-
-    public function files()
-    {
-        return $this->hasMany(Lesson::class);
-    }
 }
