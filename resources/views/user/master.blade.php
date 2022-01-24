@@ -25,7 +25,15 @@
             <span class="fs-4 fw-bold text-primary">NAME</span>
         </a>
 
-        <div class="col-md-3 text-end">
+        <div class="col text-center">
+
+            <a class="nav-link d-inline-block" href="{{ route('userCourses') }}">
+                COURSES
+            </a>
+
+        </div>
+
+        <div class="col text-end">
             @guest()
                 <a class="btn btn-outline-primary me-2" href="{{ route('login') }}">Login</a>
                 <a class="btn btn btn-primary" href="{{ route('register') }}">Sign-up</a>
@@ -33,11 +41,8 @@
 
 
             @auth()
-                @if(Auth::user()->isAdmin())
-                    <a class="btn btn-outline-primary me-2" href="{{ route('adminHome') }}">Admin</a>
-                @else
-                    <a class="btn btn-outline-primary me-2" href="{{ route('userHome') }}">Home</a>
-                @endif
+                <a class="btn btn-outline-primary me-2" href="{{ route('userHome') }}">Home</a>
+
                 <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn btn-primary">Logout</button>

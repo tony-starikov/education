@@ -34,6 +34,10 @@ Route::middleware('auth')->group(function () {
         'prefix' => 'user',
     ], function () {
         Route::get('/home', 'HomeUserController@index')->name('userHome');
+
+        Route::get('/all-courses', 'CoursesController@index')->name('userCourses');
+
+        Route::get('/course/{id}', 'CoursesController@show')->name('userCourseShow');
     });
 
     Route::group([
@@ -51,6 +55,8 @@ Route::middleware('auth')->group(function () {
             Route::resource('courses', 'CourseController');
 
             Route::resource('lessons', 'LessonController');
+
+            Route::resource('questions', 'QuestionController');
         });
 
     });

@@ -37,6 +37,10 @@
             <a class="nav-link d-inline-block" href="{{ route('lessons.index') }}">
                 LESSONS
             </a>
+
+            <a class="nav-link d-inline-block" href="{{ route('questions.index') }}">
+                QUESTIONS
+            </a>
         </div>
 
         <div class="col text-end">

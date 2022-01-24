@@ -13,4 +13,9 @@ class Lesson extends Model
         'description',
         'video_src',
     ];
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
+    }
 }

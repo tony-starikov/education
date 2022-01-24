@@ -34,13 +34,6 @@
                     <input value="{{ $course->description }}" type="text" name="description" id="description" class="form-control" placeholder="description" aria-describedby="addon-wrapping">
                 </div>
 
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">VIDEO SRC</span>
-                    </div>
-                    <input value="{{ $course->video_src }}" type="text" name="video_src" id="video_src" class="form-control" placeholder="video_src" aria-describedby="addon-wrapping">
-                </div>
-
                 <button type="submit" class="btn btn-success mt-3">EDIT</button>
 
             </div>

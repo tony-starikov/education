@@ -12,7 +12,7 @@ class Course extends Model
         'video_src',
     ];
 
-    public function files()
+    public function lessons()
     {
         return $this->hasMany(Lesson::class);
     }
