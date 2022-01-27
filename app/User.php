@@ -49,4 +49,30 @@ class User extends Authenticatable
     {
         return $this->is_admin == 1;
     }
+
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class)
+            ->withPivot(
+                'enroll_status',
+                'payment_status',
+                'enroll_time',
+                'payment_time'
+                )
+            ->withTimestamps();
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class)
+            ->withPivot(
+                'passed'
+                )
+            ->withTimestamps();
+    }
+
+    public function enrolledCourses()
+    {
+        return $this->belongsToMany(Course::class)->wherePivot('enroll_status', 1);
+    }
 }

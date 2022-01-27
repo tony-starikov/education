@@ -22,16 +22,8 @@
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <span class="fs-4 fw-bold text-primary">NAME</span>
+            <span class="fs-4 fw-bold text-primary">EDUCATION</span>
         </a>
-
-        <div class="col text-center">
-
-            <a class="nav-link d-inline-block" href="{{ route('userCourses') }}">
-                COURSES
-            </a>
-
-        </div>
 
         <div class="col text-end">
             @guest()
@@ -41,6 +33,20 @@
 
 
             @auth()
+
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            MENU
+                        </button>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="{{ route('userEnrolledCourses') }}" class="dropdown-item">MY COURSES</a></li>
+                            <li><a href="{{ route('userCourses') }}" class="dropdown-item">ALL COURSES</a></li>
+
+                        </ul>
+                    </div>
+
+
                 <a class="btn btn-outline-primary me-2" href="{{ route('userHome') }}">Home</a>
 
                 <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">

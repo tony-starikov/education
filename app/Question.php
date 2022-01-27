@@ -9,8 +9,10 @@ class Question extends Model
     protected $fillable = [
         'lesson_id',
         'question',
-        'answer_true',
-        'answer_false_1',
-        'answer_false_2',
     ];
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
 }

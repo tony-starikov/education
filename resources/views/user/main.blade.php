@@ -9,7 +9,7 @@
 
             <section class="text-center">
 
-                <h1>User Home</h1>
+                <h1>USER HOME</h1>
 
             </section>
 

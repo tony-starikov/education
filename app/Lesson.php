@@ -18,4 +18,13 @@ class Lesson extends Model
     {
         return $this->hasMany(Question::class);
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)
+            ->withPivot(
+                'passed'
+                )
+            ->withTimestamps();
+    }
 }

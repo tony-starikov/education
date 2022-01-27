@@ -16,4 +16,16 @@ class Course extends Model
     {
         return $this->hasMany(Lesson::class);
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)
+            ->withPivot(
+                'enroll_status',
+                'payment_status',
+                'enroll_time',
+                'payment_time'
+                )
+            ->withTimestamps();
+    }
 }

@@ -37,7 +37,17 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/all-courses', 'CoursesController@index')->name('userCourses');
 
+        Route::get('/my-courses', 'CoursesController@userEnrolledCourses')->name('userEnrolledCourses');
+
         Route::get('/course/{id}', 'CoursesController@show')->name('userCourseShow');
+
+        Route::get('/enrolled-course/{id}', 'CoursesController@userShowEnrolledCourse')->name('userShowEnrolledCourse');
+
+        Route::post('/course/{course}', 'CoursesController@enroll')->name('userCourseEnroll');
+
+        Route::get('/lesson/{id}', 'LessonsController@show')->name('userLessonShow');
+
+        Route::post('/lesson/{lesson}', 'LessonsController@getAnswers')->name('userGetAnswers');
     });
 
     Route::group([
@@ -57,6 +67,8 @@ Route::middleware('auth')->group(function () {
             Route::resource('lessons', 'LessonController');
 
             Route::resource('questions', 'QuestionController');
+
+            Route::resource('answers', 'AnswerController');
         });
 
     });

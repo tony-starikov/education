@@ -34,27 +34,6 @@
                     <input value="{{ $question->question }}" type="text" name="question" id="question" class="form-control" placeholder="title" aria-describedby="addon-wrapping">
                 </div>
 
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">TRUE ANSWER</span>
-                    </div>
-                    <input value="{{ $question->answer_true }}" type="text" name="answer_true" id="answer_true" class="form-control" placeholder="title" aria-describedby="addon-wrapping">
-                </div>
-
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">FALSE ANSWER 1</span>
-                    </div>
-                    <input value="{{ $question->answer_false_1 }}" type="text" name="answer_false_1" id="answer_false_1" class="form-control" placeholder="title" aria-describedby="addon-wrapping">
-                </div>
-
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">FALSE ANSWER 2</span>
-                    </div>
-                    <input value="{{ $question->answer_false_2 }}" type="text" name="answer_false_2" id="answer_false_2" class="form-control" placeholder="title" aria-describedby="addon-wrapping">
-                </div>
-
                 <button type="submit" class="btn btn-success mt-3">EDIT</button>
 
             </div>

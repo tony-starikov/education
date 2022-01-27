@@ -18,6 +18,8 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">COURSE ID</th>
+                                <th scope="col">ORDER</th>
                                 <th scope="col">TITLE</th>
                                 <th scope="col">Functions</th>
                             </tr>
@@ -26,6 +28,8 @@
                         @foreach($lessons as $lesson)
                             <tr>
                                 <th scope="row">{{ $lesson->id }}</th>
+                                <td>{{ $lesson->course_id }}</td>
+                                <td>{{ $lesson->order }}</td>
                                 <td>{{ $lesson->title }}</td>
                                 <td>
                                     <div class="btn-group">

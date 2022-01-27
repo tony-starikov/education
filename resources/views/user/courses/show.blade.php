@@ -17,6 +17,29 @@
                     {{ $course->description }}
                 </p>
 
+                @if($user->courses->contains($course->id))
+                    <p>ALREADY ENROLLED TO THE COURSE, CHECK <a href="{{ route('userEnrolledCourses') }}">MY COURSES</a>.</p>
+                @else
+                    <form method="POST" enctype="multipart/form-data" action="{{ route('userCourseEnroll', $course) }}">
+                        @csrf
+
+                        <button class="btn btn-success my-3">ENROLL</button>
+                    </form>
+                @endif
+
+
+                <section>
+
+                    @foreach($course->lessons as $lesson)
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $lesson->title }}</h5>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </section>
+
             </div>
 
         </div>

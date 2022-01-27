@@ -22,7 +22,7 @@
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <span class="fs-4 fw-bold text-primary">NAME</span>
+            <span class="fs-4 fw-bold text-primary">EDUCATION</span>
         </a>
 
         <div class="col-md-3 text-end">
@@ -31,18 +31,34 @@
                 <a class="btn btn btn-primary" href="{{ route('register') }}">Sign-up</a>
             @endguest
 
-
             @auth()
+
+                <div class="btn-group me-2">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        MENU
+                    </button>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="{{ route('userEnrolledCourses') }}" class="dropdown-item">MY COURSES</a></li>
+                        <li><a href="{{ route('userCourses') }}" class="dropdown-item">ALL COURSES</a></li>
+
+                    </ul>
+                </div>
+
+
                 @if(Auth::user()->isAdmin())
                     <a class="btn btn-outline-primary me-2" href="{{ route('adminHome') }}">Admin</a>
                 @else
                     <a class="btn btn-outline-primary me-2" href="{{ route('userHome') }}">Home</a>
                 @endif
+
                 <form class="d-inline" id="logout-form" action="{{ url('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn btn-primary">Logout</button>
                 </form>
+
             @endauth
+
         </div>
     </header>
 

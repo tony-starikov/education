@@ -9,8 +9,6 @@
 
                 <div class="col-12">
 
-                    <h1>ALL COURSES</h1>
-
                     <section>
 
                         @foreach($courses as $course)
