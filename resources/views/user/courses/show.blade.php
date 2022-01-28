@@ -28,17 +28,23 @@
                 @endif
 
 
-                <section>
+                <div class="row">
 
                     @foreach($course->lessons as $lesson)
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $lesson->title }}</h5>
+
+                        <div class="col-3 mb-2">
+
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $lesson->title }}</h5>
+                                </div>
                             </div>
+
                         </div>
+
                     @endforeach
 
-                </section>
+                </div>
 
             </div>
 

@@ -11,7 +11,7 @@
             <section class="text-center">
 
                 @guest()
-                    <h1>Sign-in or Sign-up to get access to courses</h1>
+                    <h1><a href="{{ route('login') }}">Sign-in</a> or <a href="{{ route('register') }}">Sign-up</a> to get access to courses</h1>
                 @endguest
 
                 @auth()

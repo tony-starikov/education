@@ -22,37 +22,25 @@
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <span class="fs-4 fw-bold text-primary">NAME</span>
+            <span class="fs-4 fw-bold text-primary">EDUCATION</span>
         </a>
 
-        <div class="col text-center">
-            <a class="nav-link d-inline-block" href="{{ route('users.index') }}">
-                USERS
-            </a>
-
-            <a class="nav-link d-inline-block" href="{{ route('courses.index') }}">
-                COURSES
-            </a>
-
-            <a class="nav-link d-inline-block" href="{{ route('lessons.index') }}">
-                LESSONS
-            </a>
-
-            <a class="nav-link d-inline-block" href="{{ route('questions.index') }}">
-                QUESTIONS
-            </a>
-
-            <a class="nav-link d-inline-block" href="{{ route('answers.index') }}">
-                ANSWERS
-            </a>
-        </div>
-
         <div class="col text-end">
-            @guest()
-                <a class="btn btn-outline-primary me-2" href="{{ route('login') }}">Login</a>
-                <a class="btn btn btn-primary" href="{{ route('register') }}">Sign-up</a>
-            @endguest
 
+            <div class="btn-group me-2">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    MENU
+                </button>
+                <ul class="dropdown-menu">
+
+                    <li><a href="{{ route('users.index') }}" class="dropdown-item">USERS</a></li>
+                    <li><a href="{{ route('courses.index') }}" class="dropdown-item">COURSES</a></li>
+                    <li><a href="{{ route('lessons.index') }}" class="dropdown-item">LESSONS</a></li>
+                    <li><a href="{{ route('questions.index') }}" class="dropdown-item">QUESTIONS</a></li>
+                    <li><a href="{{ route('answers.index') }}" class="dropdown-item">ANSWERS</a></li>
+
+                </ul>
+            </div>
 
             @auth()
                 @if(Auth::user()->isAdmin())
@@ -65,6 +53,7 @@
                     <button type="submit" class="btn btn btn-primary">Logout</button>
                 </form>
             @endauth
+
         </div>
     </header>
 

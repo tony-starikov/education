@@ -7,7 +7,7 @@
 
         <hr>
 
-        <h1>ADD USER</h1>
+        <h1>ADD COURSE</h1>
 
         <hr>
 
@@ -30,6 +30,13 @@
                     <span class="input-group-text" id="addon-wrapping">DESCRIPTION</span>
                 </div>
                 <input type="text" name="description" id="description" class="form-control" placeholder="description" aria-describedby="addon-wrapping">
+            </div>
+
+            <div class="input-group flex-nowrap mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">VIDEO SRC</span>
+                </div>
+                <input type="text" name="video_src" id="video_src" class="form-control" placeholder="video_src" aria-describedby="addon-wrapping">
             </div>
 
             <button type="submit" class="btn btn-success mt-3">CREATE</button>

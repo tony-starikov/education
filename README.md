@@ -1,1 +1,1 @@
-## Basic project
+## Online courses platform
