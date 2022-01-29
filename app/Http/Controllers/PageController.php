@@ -20,4 +20,9 @@ class PageController extends Controller
 
         return view('main', compact('page_info'));
     }
+
+    public function home()
+    {
+        return view('home');
+    }
 }

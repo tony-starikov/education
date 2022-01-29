@@ -24,7 +24,11 @@ Route::group([
 ], function () {
     Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
 
-    Route::get('/', 'PageController@main')->name('main');
+    Route::get('/', 'PageController@home')->name('home');
+
+    Route::get('/course', 'PageController@home')->name('course');
+
+    Route::get('/main', 'PageController@main')->name('main');
 });
 
 Route::middleware('auth')->group(function () {
