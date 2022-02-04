@@ -323,7 +323,7 @@ const Main = {
         '\n' +
         '            <div class="row p-5" style="min-height: 45vh;">\n' +
         '\n' +
-        '                <div class="col-12 text-start h-100">\n' +
+        '                <div class="col-12 text-center h-100">\n' +
         '\n' +
         '                    <img src="/images/struct1.png" alt="struct" class="img-fluid" style="width: 85%">\n' +
         '\n' +
@@ -356,7 +356,7 @@ const Main = {
         '\n' +
         '            <div class="row p-5" style="min-height: 45vh;">\n' +
         '\n' +
-        '                <div class="col-12 text-end">\n' +
+        '                <div class="col-12 text-center">\n' +
         '                    <img src="/images/monitor.png" alt="monitor" class="img-fluid" style="width: 85%">\n' +
         '                </div>\n' +
         '\n' +
