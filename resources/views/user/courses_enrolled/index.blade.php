@@ -36,7 +36,7 @@
 
                 @endforeach
             @else
-                <p>TO START YOUR EDUCATION, PLEASE ENROLL TO THE COURSE FROM <a href="{{ route('userCourses') }}">ALL COURSES</a>.</p>
+                <p class="text-center">TO START YOUR EDUCATION, PLEASE ENROLL TO THE COURSE FROM <a href="{{ route('userCourses') }}">ALL COURSES</a>.</p>
             @endif
 
         </div>

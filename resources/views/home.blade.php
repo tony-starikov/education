@@ -19,9 +19,22 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
     <title>Course</title>
 
     <style>
+        html{
+            width: 100%;
+            /*background-color: #12c700;*/
+        }
+        body {
+            width: 100%;
+            background-color: #1e1e1e;
+            font-family: 'Roboto', sans-serif;
+        }
         .open-tinybox {
             display: inline-block;
             cursor: pointer;
@@ -42,9 +55,19 @@
         }
 
         .button3{
-            width: 180px;
-            height: 123px;
-            background-image: url(/images/buttonok.png);
+            background-repeat: no-repeat;
+            min-width: 250px;
+            min-height: 150px;
+            background-size: contain;
+            background-image: url(/images/go.png);
+        }
+
+        .button3-l{
+            background-repeat: no-repeat;
+            min-width: 200px;
+            min-height: 120px;
+            background-size: contain;
+            background-image: url(/images/go.png);
         }
 
         .button4{
@@ -54,8 +77,10 @@
         }
 
         .button5{
-            min-width: 48px;
-            min-height: 48px;
+            background-repeat: no-repeat;
+            min-width: 70px;
+            min-height: 70px;
+            background-size: contain;
             background-image: url(/images/back.png);
         }
 
@@ -72,14 +97,26 @@
         }
 
         .button3:hover{
-            width: 180px;
-            height: 123px;
-            background-image: url(/images/buttonokh.png);
+            background-repeat: no-repeat;
+            min-width: 250px;
+            min-height: 150px;
+            background-size: contain;
+            background-image: url(/images/goh.png);
+        }
+
+        .button3-l:hover{
+            background-repeat: no-repeat;
+            min-width: 200px;
+            min-height: 120px;
+            background-size: contain;
+            background-image: url(/images/goh.png);
         }
 
         .button5:hover{
-            width: 48px;
-            height: 48px;
+            background-repeat: no-repeat;
+            min-width: 70px;
+            min-height: 70px;
+            background-size: contain;
             background-image: url(/images/backh.png);
         }
 
